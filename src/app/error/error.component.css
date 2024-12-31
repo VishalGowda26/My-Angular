@@ -1,0 +1,7 @@
+div{
+    height: 90vh;
+    width: 99vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

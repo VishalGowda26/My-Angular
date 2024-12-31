@@ -1,0 +1,45 @@
+<section>
+    
+  <div class="card">
+    <h1>BMI Calculator</h1>
+    <input type="text" id="height" placeholder="Enter Height (in mtrs)" /><br />
+    <input type="text" id="weight" placeholder="Enter Weight (in kg)" /><br />
+    <button onclick="checkBMI()">Check Result</button>
+    <h2 id="bmi"></h2>
+    <p style="outline: 0; border: 0" id="p"></p>
+  </div>
+
+    <script>
+      function checkBMI() {
+        var a = document.getElementById("height").value;
+        console.log(a);
+        var b = document.getElementById("weight").value;
+        console.log(b);
+        var result = b / (a * 0.3048 * (a * 0.3048));
+        console.log(result);
+        if (result < 18.5 && result > 0) {
+          var bmical = "underweight";
+          var text = "May indicate malnutrition or other health concerns.";
+        } else if (result >= 18.5 && result < 25) {
+          var bmical = "Normal";
+          text = "Generally associated with a lower risk of chronic diseases.";
+        } else if (result >= 25 && result < 30) {
+          var bmical = "OverWeight";
+          text ="May indicate an increased risk of heart disease, diabetes, and other health issues.";
+        } else if (result >= 30 && result < 35) {
+          var bmical = "Obese";
+          text ="Higher risk for various health conditions like hypertension, diabetes, and heart disease.";
+        } else if (result >= 35 && result < 40) {
+          var bmical = "Severly Obese";
+          text ="Higher risk for various health conditions like hypertension, diabetes, and heart disease.";
+        } else if (result >= 40) {
+          var bmical = "MOrbidly Obese";
+          text ="Higher risk for various health conditions like hypertension, diabetes, and heart disease.";
+        } else {
+          alert("error");
+        }
+        document.getElementById("bmi").innerText = bmical;
+        document.getElementById("p").innerText = text;
+      }
+    </script>
+</section>

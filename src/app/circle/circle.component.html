@@ -1,0 +1,67 @@
+
+  <section>
+    <div class="card">
+      <h1>Circle Calculator</h1>
+
+      <!-- Circle Inputs -->
+      <input type="number" id="radius" placeholder="Enter Radius (in cm)" /><br />
+      <button onclick="calculateCircleArea()">Calculate Circle Area</button>
+      <button onclick="calculateCircleCircumference()">Calculate Circle Circumference</button>
+
+      <h2 id="circleArea"></h2>
+      <h2 id="circleCircumference"></h2>
+
+      <!-- History -->
+      <div class="history">
+        <h3>Calculation History</h3>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Circle Functions
+    function calculateCircleArea() {
+      var radius = document.getElementById("radius").value;
+      
+      if (radius) {
+        radius = parseFloat(radius);
+        
+        var area = Math.PI * Math.pow(radius, 2);
+        
+        // Display the area result
+        document.getElementById("circleArea").textContent = "Circle Area: " + area.toFixed(2) + " cm²";
+        
+        // Add to history
+        var historyList = document.getElementById("historyList");
+        var listItem = document.createElement("li");
+        listItem.textContent = "Circle Area: " + area.toFixed(2) + " cm² (Radius: " + radius + " cm)";
+        historyList.appendChild(listItem);
+      } else {
+        alert("Please enter the radius.");
+      }
+    }
+
+    function calculateCircleCircumference() {
+      var radius = document.getElementById("radius").value;
+      
+      if (radius) {
+        radius = parseFloat(radius);
+        
+        var circumference = 2 * Math.PI * radius;
+        
+        // Display the circumference result
+        document.getElementById("circleCircumference").textContent = "Circle Circumference: " + circumference.toFixed(2) + " cm";
+        
+        // Add to history
+        var historyList = document.getElementById("historyList");
+        var listItem = document.createElement("li");
+        listItem.textContent = "Circle Circumference: " + circumference.toFixed(2) + " cm (Radius: " + radius + " cm)";
+        historyList.appendChild(listItem);
+      } else {
+        alert("Please enter the radius.");
+      }
+    }
+  </script>
+
+

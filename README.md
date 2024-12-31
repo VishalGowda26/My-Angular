@@ -53,7 +53,10 @@ Git Explaination :-
        git commit -m "xxxxx"
 
 
-
+create branch
+git branch
+git fetch
+git checkout dev
 
 
     

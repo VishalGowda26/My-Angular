@@ -17,13 +17,15 @@ section {
     width: 350px;
     text-align: center;
     transition: box-shadow 0.3s ease;
+    color: #333;
+
   }
 
   /* Hover effect for the card */
   .card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    width: 350px;
-    height: 45%;
+    width: 353px;
+    /* height: 45%; */
 
   }
 
@@ -56,12 +58,7 @@ section {
 
   /* Result heading styling */
   h2 {
-    font-size: 20px;
-    color: #333;
+    font-size: 15px;
   }
 
-  /* Paragraph styling */
-  #p {
-    font-size: 16px;
-    color: #666;
-  }
+ 

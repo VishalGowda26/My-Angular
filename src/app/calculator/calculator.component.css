@@ -1,0 +1,71 @@
+/* Styling for the section */
+section {
+  font-family: "Arial", sans-serif;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86vh;
+  margin: 0;
+}
+
+/* Styling for the card */
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect for the card */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 353px;
+}
+
+/* Input styling */
+input {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4caf50;
+}
+
+/* Button styling */
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 50px;
+  padding-top: 20px;
+  text-align: center;
+}
+button {
+  width: 25%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  gap: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #45a049;
+}

@@ -1,1 +1,17 @@
-<p>calculator works!</p>
+<section>
+  <div class="card">
+    <h1>Calculator</h1>
+
+    <!-- Circle Inputs -->
+    <input type="number" placeholder="Enter Number" [(ngModel)]="num1" /><br />
+    <input type="number" placeholder="Enter Number" [(ngModel)]="num2" /><br />
+    <div class="buttons">
+      <button [disabled]="!num1 || !num2" (click)="sum()">Sum</button>
+      <button [disabled]="!num1 || !num2" (click)="sub()">Sub</button>
+      <button [disabled]="!num1 || !num2" (click)="mul()">Multiply</button>
+      <button [disabled]="!num1 || !num2" (click)="div()">Division</button>
+    </div>
+    <h2>Result is : {{ result }}</h2>
+    
+  </div>
+</section>

@@ -11,6 +11,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'circle', component: CircleComponent },
       { path: 'bmi', component: BmiComponent },
       { path: 'directives', component: DirectivesComponent },
+      { path: 'pipes', component: PipesComponent },
     ],
   },
   {path:'**',component:ErrorComponent}

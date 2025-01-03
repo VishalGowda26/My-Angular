@@ -68,7 +68,10 @@ git checkout dev
     3. Custom Directives :- are user-defined directives that extend Angular's built-in directives to create specialized behavior for elements in the DOM.
 
 
+    Pipes: Used to filter the Data Formate(filters)
+    *****
 
+    |
 
 
 

@@ -1,0 +1,43 @@
+<h1>Directives</h1>
+<h4>{{ age }}</h4>
+<h4 *ngFor="let age of ages">My age is: {{ age }}</h4>
+
+<ol>
+  <li *ngFor="let state of states">{{ state }}</li>
+</ol>
+<ul>
+  <li *ngFor="let state of states">{{ state }}</li>
+</ul>
+
+<select name="" id="">
+  <option value="" *ngFor="let state of states">{{ state }}</option>
+</select>
+
+<h3 *ngFor="let product of products">
+  {{ product.pName }} cost is {{ product.price }}
+</h3>
+
+<table border="1" cellpadding="20" cellspacing="0">
+  <thead>
+    <tr>
+      <th>S.no</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ product.pName }}</td>
+      <td>{{ product.price }}</td>
+
+      
+      <!-- ngStyle & ngClass -->
+      <!-- <td [ngStyle]="{'color': product.price <=50000?'green':'red'}">{{ product.price }}</td> -->
+      <td [ngClass]="{'green':product.price<=50000,'red':product.price>500000}">{{ product.price }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 *ngIf="true">Hi Team</h1>
+<h1 *ngIf="false">Welcome on Board</h1>

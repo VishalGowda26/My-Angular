@@ -59,7 +59,21 @@ git fetch
 git checkout dev
 
 
-    
+    Directives: Used to alter the DOM
+    **********
+    1. Structural Directives :- modify the DOM structure by adding or removing elements (e.g., *ngIf, *ngFor).
+
+    2. Attribute Directives :- modify the behavior or appearance of elements (e.g., ngClass, ngStyle).
+
+    3. Custom Directives :- are user-defined directives that extend Angular's built-in directives to create specialized behavior for elements in the DOM.
+
+
+
+
+
+
+
+
 
 
 ?! Learn UnitTesting

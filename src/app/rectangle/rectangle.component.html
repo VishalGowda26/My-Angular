@@ -1,72 +1,13 @@
 <section>
     <div class="card">
       <h1>Rectangle Calculator</h1>
-      <input type="number" id="length" placeholder="Enter Length (in cm)" /><br />
-      <input type="number" id="width" placeholder="Enter Width (in cm)" /><br />
+      <input type="number" [(ngModel)]="length" placeholder="Enter Length (in cm)" /><br />
+      <input type="number" [(ngModel)]="width" placeholder="Enter Width (in cm)" /><br />
       
       <!-- Buttons for separate calculations -->
-      <button onclick="calculateArea()">Calculate Area</button>
-      <button onclick="calculatePerimeter()">Calculate Perimeter</button>
+      <button [disabled]="!length || !width" (click)="calculateArea()">Calculate Area</button>
+      <button [disabled]="!length || !width" (click)="calculatePerimeter()">Calculate Perimeter</button>
       
-      <h2 id="area"></h2>
-      <h2 id="perimeter"></h2>
-      
-      <!-- History of calculations -->
-      <div class="history">
-        <h3>Calculation History</h3>
-        <ul id="historyList"></ul>
-      </div>
+      <h2>Result is : {{ result }}</h2>
     </div>
   </section>
-
-  <script>
-    // Function to calculate Area
-    function calculateArea() {
-      var length = document.getElementById("length").value;
-      var width = document.getElementById("width").value;
-      
-      if (length && width) {
-        length = parseFloat(length);
-        width = parseFloat(width);
-        
-        // Calculate area
-        var area = length * width;
-        
-        // Display area result
-        document.getElementById("area").textContent = "Area: " + area.toFixed(2) + " cm²";
-        
-        // Add to history list
-        var historyList = document.getElementById("historyList");
-        var listItem = document.createElement("li");
-        listItem.textContent = "Area: " + area.toFixed(2) + " cm² (Length: " + length + " cm, Width: " + width + " cm)";
-        historyList.appendChild(listItem);
-      } else {
-        alert("Please enter both length and width.");
-      }
-    }
-
-    // Function to calculate Perimeter
-    function calculatePerimeter() {
-      var length = document.getElementById("length").value;
-      var width = document.getElementById("width").value;
-      
-      if (length && width) {
-        length = parseFloat(length);
-        width = parseFloat(width);
-        
-        // Calculate perimeter
-        var perimeter = 2 * (length + width);
-        
-        // Display perimeter result
-        document.getElementById("perimeter").textContent = "Perimeter: " + perimeter.toFixed(2) + " cm";
-        
-        // Add to history list
-        var historyList = document.getElementById("historyList");
-        var listItem = document.createElement("li");
-        listItem.textContent = "Perimeter: " + perimeter.toFixed(2) + " cm (Length: " + length + " cm, Width: " + width + " cm)";
-        historyList.appendChild(listItem);
-      } else {
-        alert("Please enter both length and width.");
-      }
-    }
-  </script>

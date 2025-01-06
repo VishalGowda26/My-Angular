@@ -4,7 +4,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 86vh;
+    height: 90vh;
     margin: 0;
   }
 
@@ -31,7 +31,7 @@ section {
 
   /* Input styling */
   input {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -41,7 +41,7 @@ section {
 
   /* Button styling */
   button {
-    width: 85%;
+    width: 100%;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
@@ -58,6 +58,7 @@ section {
 
   /* Result heading styling */
   h2 {
+    padding-top: 20px;
     font-size: 15px;
   }
 

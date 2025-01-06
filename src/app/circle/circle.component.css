@@ -5,7 +5,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 86vh;
+        height: 90vh;
         margin: 0;
       }
   
@@ -29,7 +29,7 @@
   
       /* Input styling */
       input {
-        width: 80%;
+        width: 100%;
         padding: 12px;
         margin: 10px 0;
         border: 1px solid #ccc;
@@ -45,7 +45,7 @@
   
       /* Button styling */
       button {
-        width: 85%;
+        width: 100%;
         padding: 12px;
         background-color: #4CAF50;
         color: white;

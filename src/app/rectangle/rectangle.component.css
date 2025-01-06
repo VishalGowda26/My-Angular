@@ -5,7 +5,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 86vh;
+    height: 90vh;
     margin: 0;
   }
 
@@ -15,7 +15,7 @@ section {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 450px;
     text-align: center;
     transition: box-shadow 0.3s ease;
   }
@@ -23,15 +23,15 @@ section {
   /* Hover effect for the card */
   .card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    width: 353px;
+    width: 453px;
 
   }
 
   /* Input styling */
   input {
-    width: 80%;
+    width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
@@ -45,7 +45,7 @@ section {
 
   /* Button styling */
   button {
-    width: 85%;
+    width: 100%;
     padding: 12px;
     background-color: #4CAF50;
     color: white;

@@ -7,13 +7,13 @@
 
 .left{
     width: 15%;
-    height: 95%;
+    height:100%;
     background-color: grey; 
     padding: 20px;
     color: rgb(255, 255, 255);
 }
 .left_top{
-  height: 10%;
+  height: 15%;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -32,7 +32,7 @@
   font-family: "Poppins";
 }
 .left_bottom{
-  height: 10%;
+  height: 15%;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -46,8 +46,8 @@ button{
   border: 2px solid rgb(204,204,205);
 }
 .right{
-    width: 78%;
-    height: 90.5%;
+    width: 85%;
+    height: 100%;
     border:10px solid hotpink;
     padding: 20px;
     overflow: auto;

@@ -16,6 +16,7 @@ import { BmiComponent } from './bmi/bmi.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PipesComponent } from './pipes/pipes.component';
     CircleComponent,
     BmiComponent,
     DirectivesComponent,
-    PipesComponent
+    PipesComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { MyMartComponent } from './my-mart/my-mart.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: 'directives', component: DirectivesComponent },
       { path: 'pipes', component: PipesComponent },
       { path: 'emp', component: EmployeeComponent },
+      { path: 'mart', component: MyMartComponent },
     ],
   },
   {path:'**',component:ErrorComponent}

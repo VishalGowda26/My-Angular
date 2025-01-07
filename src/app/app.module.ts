@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { MyMartComponent } from './my-mart/my-mart.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EmployeeComponent } from './employee/employee.component';
     BmiComponent,
     DirectivesComponent,
     PipesComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    MyMartComponent
   ],
   imports: [
     BrowserModule,

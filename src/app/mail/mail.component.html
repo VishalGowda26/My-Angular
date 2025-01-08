@@ -1,0 +1,19 @@
+<h3>mail works!</h3>
+<br />
+<select [(ngModel)]="selectedUser" (change)="onUserChange()">
+  <option>1</option>
+  <option>2</option>
+  <option>User-3</option>
+  <option>User-4</option>
+  <option>User-5</option>
+  <option>User-6</option>
+  <option>User-7</option>
+  <option>User-8</option>
+  <option>User-9</option>
+</select>
+<section *ngFor="let mail of mails">
+  <div>{{ mail.id }}.</div>
+  <div [ngStyle]="{ color: mail.completed == true ? 'grey' : 'black' }">
+    {{ mail.title }}
+  </div>
+</section>

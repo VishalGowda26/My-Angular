@@ -1,0 +1,14 @@
+<h4>Store</h4>
+<section>
+  <div class="card" style="width: 15rem" *ngFor="let product of products">
+    <img class="card-img-top" src="{{ product.image }}" alt="Card image cap" />
+    <h3>{{ product.category }}</h3>
+    <div>{{ product.description | slice : 0 : 45 }}...</div>
+    <div class="card-body" style="color: rgb(199, 23, 23)">
+      Rs. {{ product.price }}
+    </div>
+    <div class="rating">
+      {{ product.rating.rate }} | {{ product.rating.count }}
+    </div>
+  </div>
+</section>

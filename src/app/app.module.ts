@@ -18,6 +18,11 @@ import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { MyMartComponent } from './my-mart/my-mart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from "@angular/common/http";
+import { AccountsComponent } from './accounts/accounts.component';
+import { FakestoreComponent } from './fakestore/fakestore.component';
+import { MailComponent } from './mail/mail.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +40,17 @@ import { MyMartComponent } from './my-mart/my-mart.component';
     DirectivesComponent,
     PipesComponent,
     EmployeeComponent,
-    MyMartComponent
+    MyMartComponent,
+    VehicleComponent,
+    AccountsComponent,
+    FakestoreComponent,
+    MailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,11 +14,17 @@ import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { MyMartComponent } from './my-mart/my-mart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { FakestoreComponent } from './fakestore/fakestore.component';
+import { MailComponent } from './mail/mail.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: LoginComponent },
-  { path: 'dashboard',component: DashboardComponent,
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'welcome', component: WelcomeComponent },
@@ -31,9 +37,13 @@ const routes: Routes = [
       { path: 'pipes', component: PipesComponent },
       { path: 'emp', component: EmployeeComponent },
       { path: 'mart', component: MyMartComponent },
+      { path: 'vehicle', component: VehicleComponent },
+      { path: 'accounts', component: AccountsComponent },
+      { path: 'store', component: FakestoreComponent },
+      { path: 'mail', component: MailComponent },
     ],
   },
-  {path:'**',component:ErrorComponent}
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({

@@ -46,4 +46,19 @@ export class VehicleComponent {
       }
     );
   }
+
+  limit: number = 0;
+  page: number = 0;
+
+  pagination() {
+    this._vehicleService.getPaginatedVehicles(this.limit, this.page).subscribe(
+      (data: any) => {
+        this.vehicles = data;
+        console.log(this.vehicles);
+      },
+      (err: any) => {
+        console.log('Internal Server Error');
+      }
+    );
+  }
 }

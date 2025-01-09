@@ -8,10 +8,42 @@ import { VehicleService } from '../vehicle.service';
 })
 export class VehicleComponent {
   vehicles: any = [];
+  term: string = '';
   constructor(private _vehicleService: VehicleService) {
-    _vehicleService.getVehicles().subscribe((data: any) => {
-      this.vehicles = data;
-      console.log(this.vehicles);
-    });
+    _vehicleService.getVehicles().subscribe(
+      (data: any) => {
+        this.vehicles = data;
+        // console.log(this.vehicles);
+      },
+      (err: any) => {
+        alert('Internal Server Error');
+      }
+    );
+  }
+
+  filter() {
+    this._vehicleService.getFilteredVehicles(this.term).subscribe(
+      (data: any) => {
+        this.vehicles = data;
+        console.log(this.vehicles);
+      },
+      (err: any) => {
+        alert('Internal Server Error');
+      }
+    );
+  }
+
+  column: string = '';
+  order: string = '';
+
+  sort() {
+    this._vehicleService.getSortedVehicles(this.column, this.order).subscribe(
+      (data: any) => {
+        this.vehicles = data;
+      },
+      (err: any) => {
+        alert('Internal Server Error');
+      }
+    );
   }
 }

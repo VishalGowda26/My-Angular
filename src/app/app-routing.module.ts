@@ -23,6 +23,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { BlogComponent } from './blog/blog.component';
 import { MovieComponent } from './movie/movie.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -51,6 +52,7 @@ const routes: Routes = [
       { path: 'blogs', component: BlogComponent },
       { path: 'movie', component: MovieComponent },
       { path: 'profile', component: ProfileComponent },
+      { path: 'cards', component: PokemonCarouselComponent },
     ],
   },
   { path: '**', component: ErrorComponent },

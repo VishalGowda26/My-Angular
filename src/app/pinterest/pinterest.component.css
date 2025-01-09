@@ -1,0 +1,70 @@
+section {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container for each card */
+.card {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 10px; /* Rounded corners for better aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+}
+
+/* Initially hide the button and author */
+.btn,
+.card-title {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Button position */
+.btn {
+  bottom: 5%;
+  background-color: rgba(0,123,255,0.8); /* Use the same as btn-primary but with opacity */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Card title (author name) position */
+.card-title {
+  bottom: 30%;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  z-index: 0;
+  padding: 5px 10px;
+  background-color: rgba( 0, 0, 0, 0.5); /* Semi-transparent background for readability */
+  border-radius: 5px;
+}
+
+/* Make the button and author visible on hover */
+.card:hover .btn,
+.card:hover .card-title {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px); /* Slight movement on hover for added effect */
+}

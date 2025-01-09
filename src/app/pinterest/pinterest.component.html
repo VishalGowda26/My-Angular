@@ -1,0 +1,8 @@
+<h4>Pinterest</h4>
+<section>
+  <div class="card" style="width: 15rem; height: 15rem" *ngFor="let picture of pictures">
+    <img src="{{ picture.download_url }}" class="card-img-top" alt="..." />
+    <a href="{{ picture.download_url }}" class="btn btn-primary">Download</a>
+    <h5 class="card-title">{{ picture.author }}</h5>
+  </div>
+</section>

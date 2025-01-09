@@ -1,0 +1,25 @@
+<section>
+  <h1>Weather Report</h1>
+  <div class="card" >
+    <div class="card-body" [ngStyle]="checkDay()">
+      <div class="date">{{ date | date : "medium" : "UTC+5:30" }}</div>
+      <h4 class="card-title">Weather in Hyderabad</h4>
+      <div id="circle" [ngStyle]="getStyles()"></div>
+      <h2>
+        {{ reports.current_weather.temperature
+        }}{{ reports.current_weather_units.temperature }}
+      </h2>
+      <div class="speed">
+        <p>
+          Wind Speed : {{ reports.current_weather.windspeed
+          }}{{ reports.current_weather_units.windspeed }}
+        </p>
+        <p>
+          Wind Direction : {{ reports.current_weather.winddirection
+          }}{{ reports.current_weather_units.winddirection }}&nbsp;(NE)
+        </p>
+      </div>
+      <p class="day">Daytime</p>
+    </div>
+  </div>
+</section>

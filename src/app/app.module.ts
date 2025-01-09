@@ -23,6 +23,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { AccountsComponent } from './accounts/accounts.component';
 import { FakestoreComponent } from './fakestore/fakestore.component';
 import { MailComponent } from './mail/mail.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { BlogComponent } from './blog/blog.component';
+import { MovieComponent } from './movie/movie.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,12 @@ import { MailComponent } from './mail/mail.component';
     VehicleComponent,
     AccountsComponent,
     FakestoreComponent,
-    MailComponent
+    MailComponent,
+    PinterestComponent,
+    WeatherComponent,
+    BlogComponent,
+    MovieComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

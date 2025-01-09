@@ -1,0 +1,13 @@
+<h3>Blogs</h3>
+<section>
+  <div class="card" *ngFor="let blog of blogs">
+    <div class="card-body">
+      <h5 class="card-title">{{ blog.title }}</h5>
+      <p class="card-text">
+        {{ blog.author }} |
+        <small class="text-muted">{{ blog.date_published }}</small>
+      </p>
+      <p class="card-text">{{ blog.content }}</p>
+    </div>
+  </div>
+</section>

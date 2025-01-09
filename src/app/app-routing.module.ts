@@ -18,6 +18,11 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FakestoreComponent } from './fakestore/fakestore.component';
 import { MailComponent } from './mail/mail.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { BlogComponent } from './blog/blog.component';
+import { MovieComponent } from './movie/movie.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -41,6 +46,11 @@ const routes: Routes = [
       { path: 'accounts', component: AccountsComponent },
       { path: 'store', component: FakestoreComponent },
       { path: 'mail', component: MailComponent },
+      { path: 'pinterest', component: PinterestComponent },
+      { path: 'weather', component: WeatherComponent },
+      { path: 'blogs', component: BlogComponent },
+      { path: 'movie', component: MovieComponent },
+      { path: 'profile', component: ProfileComponent },
     ],
   },
   { path: '**', component: ErrorComponent },

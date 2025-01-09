@@ -1,0 +1,59 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 20px;
+}
+
+.card {
+  width: 28%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.card-img-top {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+}
+
+p {
+  font-size: 12px;
+}
+.btn {
+  background-color: rgba(146, 146, 146, 0.171);
+}
+
+.saperator {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  line-height: 0;
+}
+i {
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+  color: rgb(0, 235, 0);
+}

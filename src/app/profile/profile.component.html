@@ -1,0 +1,23 @@
+<h4>Social Profiles</h4>
+<section>
+  <div class="card" *ngFor="let profile of profiles">
+    <img src="{{ profile.profilePic }}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ profile.fullName }}</h5>
+      <small class="text-muted">@{{ profile.username }}</small>
+      <i>{{ profile.bio }}</i>
+      <p><b>Location: </b>{{ profile.location }}</p>
+      <p><b>Work: </b>{{ profile.work }}</p>
+      <p><b>Hobbies: </b>{{ profile.hobbies }}</p>
+      <p><b>Intrests: </b>{{ profile.interests }}</p>
+      <a href="{{ profiles.homepage }}">Visit Homepage</a>
+      <div class="saperator_top">
+        <p class="btn btn-light">Followers: {{ profile.followersCount }}</p>
+      </div>
+      <div class="saperator">
+        <p class="btn btn-light">Following: {{ profile.followingCount }}</p>
+        <p class="btn btn-light">Posts: {{ profile.postsCount }}</p>
+      </div>
+    </div>
+  </div>
+</section>

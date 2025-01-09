@@ -10,7 +10,11 @@ export class VehicleComponent {
   vehicles: any = [];
   term: string = '';
   constructor(private _vehicleService: VehicleService) {
-    _vehicleService.getVehicles().subscribe(
+    this.pageLoad();
+  }
+
+  pageLoad() {
+    this._vehicleService.getVehicles().subscribe(
       (data: any) => {
         this.vehicles = data;
         // console.log(this.vehicles);
@@ -60,5 +64,21 @@ export class VehicleComponent {
         console.log('Internal Server Error');
       }
     );
+  }
+
+  delete(id: number) {
+    if (confirm('Are you sure to delete') == true) {
+      this._vehicleService.deleteVehicle(id).subscribe(
+        (data: any) => {
+          alert('Record Deleted Successfully');
+          this.pageLoad();
+        },
+        (err: any) => {
+          alert('Internal Server Error');
+        }
+      );
+    } else {
+      alert('You have Cancelled');
+    }
   }
 }

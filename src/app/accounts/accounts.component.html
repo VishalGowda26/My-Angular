@@ -1,5 +1,35 @@
 <h4>Accounts</h4>
 
+<!-- for filter Search -->
+<input type="text" [(ngModel)]="word" (keyup)="filter()" />
+
+<!-- Sort data by Ascending or Descending -->
+<select [(ngModel)]="column">
+  <option>account_name</option>
+  <option>available_balance</option>
+  <option>account_number</option>
+  <option>city</option>
+  <option>id</option>
+</select>
+<select [(ngModel)]="order">
+  <option>asc</option>
+  <option>dec</option>
+</select>
+<button class="btn btn-primary" (click)="sort()">sort</button>
+
+<!-- Pagination -->
+<select [(ngModel)]="limit">
+  <option>10</option>
+  <option>20</option>
+  <option>30</option>
+</select>
+<select [(ngModel)]="page">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+</select>
+<button class="btn btn-primary" (click)="pagination()">pagination</button>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -9,16 +39,30 @@
       <th>City</th>
       <th>Profile Pic</th>
       <th>Id</th>
+      <!-- Delete the record -->
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let account of accounts">
-        <td>{{account.account_name}}</td>
-        <td>{{account.account_number}}</td>
-        <td>{{account.available_balance}}</td>
-        <td>{{account.city}}</td>
-        <td><img height="80px" width="80px" src="{{account.profie_picture}}" alt=""></td>
-        <td>{{account.id}}</td>
+      <td>{{ account.account_name }}</td>
+      <td>{{ account.account_number }}</td>
+      <td>{{ account.available_balance }}</td>
+      <td>{{ account.city }}</td>
+      <td>
+        <img
+          height="80px"
+          width="80px"
+          src="{{ account.profie_picture }}"
+          alt=""
+        />
+      </td>
+      <td>{{ account.id }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="delete(account.id)">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>

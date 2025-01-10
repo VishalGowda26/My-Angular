@@ -28,6 +28,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { BlogComponent } from './blog/blog.component';
 import { MovieComponent } from './movie/movie.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ProfileComponent } from './profile/profile.component';
     WeatherComponent,
     BlogComponent,
     MovieComponent,
-    ProfileComponent
+    ProfileComponent,
+    PokemonCarouselComponent
   ],
   imports: [
     BrowserModule,

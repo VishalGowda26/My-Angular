@@ -1,26 +1,67 @@
 <h1>vehicles</h1>
 
+<input type="text" [(ngModel)]="term" (keyup)="filter()" />
+
+<select [(ngModel)]="column">
+  <option>Vehicle</option>
+  <option>manufacturer</option>
+  <option>model</option>
+  <option>fuel</option>
+  <option>color</option>
+  <option>cost</option>
+</select>
+
+<select [(ngModel)]="order">
+  <option>asc</option>
+  <option>dec</option>
+</select>
+<button class="btn btn-light" (click)="sort()">Sort</button>
+
+<select [(ngModel)]="limit">
+  <option>10</option>
+  <option>20</option>
+  <option>30</option>
+  <option>40</option>
+</select>
+
+<select [(ngModel)]="page">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+</select>
+<button class="btn btn-light" (click)="pagination()">Pagination</button>
+
 <table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Vehicle</th>
-            <th>Manufacturer</th>
-            <th>Model</th>
-            <th>Type</th>
-            <th>Fuel</th>
-            <th>Color</th>
-            <th>Cost</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let vehicle of vehicles">
-            <td>{{vehicle.Vehicle}}</td>
-            <td>{{vehicle.manufacturer}}</td>
-            <td>{{vehicle.model}}</td>
-            <td>{{vehicle.type}}</td>
-            <td>{{vehicle.fuel}}</td>
-            <td>{{vehicle.color}}</td>
-            <td>{{vehicle.cost}}</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Vehicle</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Type</th>
+      <th>Fuel</th>
+      <th>Color</th>
+      <th>Cost</th>
+      <th>Image</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vehicle of vehicles">
+      <td>{{ vehicle.Vehicle }}</td>
+      <td>{{ vehicle.manufacturer }}</td>
+      <td>{{ vehicle.model }}</td>
+      <td>{{ vehicle.type }}</td>
+      <td>{{ vehicle.fuel }}</td>
+      <td>{{ vehicle.color }}</td>
+      <td>{{ vehicle.cost }}</td>
+      <td>
+        <img width="100px" height="100px" src="{{ vehicle.image }}" alt="" />
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="delete(vehicle.id)">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
 </table>

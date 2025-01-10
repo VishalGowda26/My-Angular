@@ -39,7 +39,14 @@ export class VehicleService {
 
   deleteVehicle(id: number): Observable<any> {
     return this._httpClient.delete(
-      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction'+id
+      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/' + id
+    );
+  }
+
+  createVehicle(data: any) {
+    return this._httpClient.post(
+      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction',
+      data
     );
   }
 }

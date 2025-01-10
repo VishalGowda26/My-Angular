@@ -1,6 +1,6 @@
-<h1>vehicles</h1>
+<h1 class="top">Vehicles Data</h1>
 
-<input type="text" [(ngModel)]="term" (keyup)="filter()" />
+<input type="text" [(ngModel)]="term" (keyup)="filter()" />&nbsp;
 
 <select [(ngModel)]="column">
   <option>Vehicle</option>
@@ -15,7 +15,7 @@
   <option>asc</option>
   <option>dec</option>
 </select>
-<button class="btn btn-light" (click)="sort()">Sort</button>
+<button class="btn btn-secondary" (click)="sort()">Sort</button>&nbsp;
 
 <select [(ngModel)]="limit">
   <option>10</option>
@@ -29,7 +29,9 @@
   <option>2</option>
   <option>3</option>
 </select>
-<button class="btn btn-light" (click)="pagination()">Pagination</button>
+<button class="btn btn-secondary" (click)="pagination()">Pagination</button>&nbsp;
+
+<button class="btn btn-primary" routerLink="/dashboard/create-vehicle">Create Vehicle</button>&nbsp;
 
 <table class="table table-striped">
   <thead>

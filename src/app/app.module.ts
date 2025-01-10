@@ -13,7 +13,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeComponent } from './employee/employee.component';
@@ -29,6 +29,7 @@ import { BlogComponent } from './blog/blog.component';
 import { MovieComponent } from './movie/movie.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 @NgModule({
   declarations: [
@@ -56,13 +57,15 @@ import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.co
     BlogComponent,
     MovieComponent,
     ProfileComponent,
-    PokemonCarouselComponent
+    PokemonCarouselComponent,
+    CreateVehicleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

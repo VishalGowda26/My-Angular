@@ -24,6 +24,7 @@ import { BlogComponent } from './blog/blog.component';
 import { MovieComponent } from './movie/movie.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -44,6 +45,7 @@ const routes: Routes = [
       { path: 'emp', component: EmployeeComponent },
       { path: 'mart', component: MyMartComponent },
       { path: 'vehicle', component: VehicleComponent },
+      { path: 'create-vehicle', component: CreateVehicleComponent },
       { path: 'accounts', component: AccountsComponent },
       { path: 'store', component: FakestoreComponent },
       { path: 'mail', component: MailComponent },

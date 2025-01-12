@@ -1,0 +1,40 @@
+<section>
+  <div class="form-container">
+    <div class="form-card">
+      <h2>Student Information</h2>
+      <form action="" [formGroup]="studentForm">
+        <label for="name">Name:</label>
+        <input type="text" formControlName="name"/>
+
+        <label for="phone">Phone:</label>
+        <input type="number" formControlName="phone"/>
+
+        <label for="city">City:</label>
+        <input type="text" formControlName="city"/>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" formControlName="dob"/>
+
+        <label for="email">Email:</label>
+        <input type="text" formControlName="email"/>
+
+        <label for="email">Profile Pic:</label>
+        <input type="text" formControlName="profile_picture"/>
+
+        <label for="school_name">School Name:</label>
+        <input type="text" formControlName="school_name"/>
+
+        <label for="school_name">School logo:</label>
+        <input type="text" formControlName="school_logo"/>
+
+        <label for="school_city">School City:</label>
+        <input type="text" formControlName="school_city"/>
+
+        <label for="school_pin">School Pin:</label>
+        <input type="text" formControlName="school_pin"/>
+
+        <button type="submit" (click)="create()">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>

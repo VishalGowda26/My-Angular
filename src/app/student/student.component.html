@@ -1,0 +1,82 @@
+<article>
+  <h4>Student cards</h4>
+
+  <!-- Fliter -->
+  <input
+    type="text"
+    [(ngModel)]="word"
+    (keyup)="filter()"
+    placeholder="Search for Keywords"
+  />&nbsp;
+
+  <!-- Sort -->
+  <select [(ngModel)]="column">
+    <option>name</option>
+    <option>phone</option>
+    <option>city</option>
+    <option>email</option>
+    <option>school_name</option>
+  </select>
+  <select [(ngModel)]="order">
+    <option>asc</option>
+    <option>dec</option>
+  </select>
+  <button class="btn btn-info" (click)="sort()">Sort</button>
+
+  <!-- pagination -->
+  <select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+  </select>
+  <select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+  </select>
+  <button class="btn btn-info" (click)="pagination()">Sort</button>&nbsp;
+
+  <button style="width: 100px; "  class="btn btn-primary"  routerLink="/dashboard/create-student">Create Student</button>
+</article>
+
+<section>
+  <div class="card text-center" *ngFor="let student of students">
+    <div class="card-header">
+      <img class="shoki" src="{{ student.school_logo }}" alt="" />
+      <div>{{ student.school_name }}</div>
+    </div>
+    <div class="card-body">
+      <div>
+        <p>
+          Name: <b>{{ student.name }}</b>
+        </p>
+        <p>
+          Phone: <b>{{ student.phone }}</b>
+        </p>
+        <p>
+          Dob: <b>{{ student.dob }}</b>
+        </p>
+        <p>
+          City: <b>{{ student.city }}</b>
+        </p>
+        <p>
+          Email: <b>{{ student.email }}</b>
+        </p>
+      </div>
+      <img class="profile_pic" src="{{ student.profile_picture }}" alt="" />
+    </div>
+    <div class="card-footer text-body-secondary">
+      <div class="footer_school">
+        <p>School City: {{ student.school_city }}</p>
+        <p>School Pin: {{ student.school_pin }}</p>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-dark">View</button>
+        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-danger" (click)="delete(student.id)">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

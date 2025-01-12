@@ -30,6 +30,8 @@ import { MovieComponent } from './movie/movie.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentComponent } from './student/student.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     MovieComponent,
     ProfileComponent,
     PokemonCarouselComponent,
-    CreateVehicleComponent
+    CreateVehicleComponent,
+    StudentComponent,
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,

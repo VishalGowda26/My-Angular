@@ -25,6 +25,8 @@ import { MovieComponent } from './movie/movie.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentComponent } from './student/student.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -55,6 +57,8 @@ const routes: Routes = [
       { path: 'movie', component: MovieComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'cards', component: PokemonCarouselComponent },
+      { path: 'students', component: StudentComponent },
+      { path: 'create-student', component: CreateStudentComponent },
     ],
   },
   { path: '**', component: ErrorComponent },

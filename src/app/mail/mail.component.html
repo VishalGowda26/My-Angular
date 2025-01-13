@@ -1,16 +1,26 @@
-<h3>mail works!</h3>
-<br />
-<select [(ngModel)]="selectedUser" (change)="onUserChange()">
-  <option>1</option>
-  <option>2</option>
-  <option>User-3</option>
-  <option>User-4</option>
-  <option>User-5</option>
-  <option>User-6</option>
-  <option>User-7</option>
-  <option>User-8</option>
-  <option>User-9</option>
-</select>
+<h3>Welcome to Mail</h3>
+<div class="top_saperator">
+  <select class="styled_select" [(ngModel)]="id" (change)="getMailsById()">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+  </select>
+
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input  type="checkbox"  [(ngModel)]="completed"  (change)="filterUnread()"/>
+    </div>
+    <label for="">read</label>
+  </div>
+</div>
+
 <section *ngFor="let mail of mails">
   <div>{{ mail.id }}.</div>
   <div [ngStyle]="{ color: mail.completed == true ? 'grey' : 'black' }">

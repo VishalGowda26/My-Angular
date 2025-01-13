@@ -12,4 +12,20 @@ export class MailService {
     return this._httpClient.get('https://jsonplaceholder.typicode.com/todos');
   }
 
+  // getMails based on Id
+  getMessageById(id: number): Observable<any> {
+    return this._httpClient.get(
+      'https://jsonplaceholder.typicode.com/todos?userId=' + id
+    );
+  }
+
+  // filter the mails (read or unread)
+  filterMessages(completed: boolean, id: number): Observable<any> {
+    return this._httpClient.get(
+      'https://jsonplaceholder.typicode.com/todos?completed=' +
+        completed +
+        '&userId=' +
+        id
+    );
+  }
 }

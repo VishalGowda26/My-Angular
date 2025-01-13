@@ -12,19 +12,42 @@ export class MailComponent {
   selectedUser: any;
 
   constructor(private _mailService: MailService) {
-    _mailService.getMessage().subscribe((data: any) => {
+    this.loadMails();
+  }
+
+  // Load the mails
+  loadMails() {
+    this._mailService.getMessage().subscribe((data: any) => {
       this.mails = data;
-      console.log(this.mails);
+      // console.log(this.mails);
     });
   }
 
-  onUserChange() {
-    this.mails.map((m:any)=>{
-      if(m.userId==this.selectedUser){
-        return this.mails;
+  // getMails based on Id
+  id: number = 0;
+  getMailsById() {
+    this._mailService.getMessageById(this.id).subscribe(
+      (data: any) => {
+        this.mails = data;
+        console.log(this.mails);
+      },
+      (err: any) => {
+        alert('Internal Server Error');
       }
-    })
+    );
   }
 
-  
+  // getMails based on Id
+  completed: boolean = false;
+  filterUnread() {
+    this._mailService.filterMessages(this.completed, this.id).subscribe(
+      (data: any) => {
+        this.mails = data;
+        console.log(this.mails);
+      },
+      (err: any) => {
+        alert('Internal Server Error');
+      }
+    );
+  }
 }

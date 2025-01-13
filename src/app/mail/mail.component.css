@@ -1,5 +1,55 @@
-section{
-    display: flex;
-    gap: 20px;
-    padding: 10px;
+section {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* General styling for the select element */
+.styled_select {
+  height: 40px;
+  width: 120px; /* Adjust the width as needed */
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* appearance: none; Removes default dropdown arrow */
+  color: #333;
+  cursor: pointer;
+}
+
+/* Styling the option elements */
+.styled-select option {
+  padding: 8px 16px; /* Padding around option text */
+  font-size: 16px;
+  background-color: #fff; /* White background for options */
+  color: #333; /* Default text color */
+  border-bottom: 1px solid #eee; /* Light border between options */
+}
+
+/* Styling on hover (not all browsers support this) */
+.styled-select option:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #0056b3; /* Blue text color on hover */
+}
+
+.input-group {
+  width: 150px;
+  text-align: center;
+  padding: 3px;
+  border: 1px solid rgb(211, 210, 210);
+  border-radius: 5px;
+  background-color: rgb(244, 244, 244);
+}
+
+.top_saperator {
+  display: flex;
+  gap: 20%;
+}
+
+.input-group-prepend{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }

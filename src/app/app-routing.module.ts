@@ -27,6 +27,7 @@ import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.co
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentComponent } from './student/student.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -59,6 +60,7 @@ const routes: Routes = [
       { path: 'cards', component: PokemonCarouselComponent },
       { path: 'students', component: StudentComponent },
       { path: 'create-student', component: CreateStudentComponent },
+      { path: 'create-user', component: CreateUserComponent },
     ],
   },
   { path: '**', component: ErrorComponent },

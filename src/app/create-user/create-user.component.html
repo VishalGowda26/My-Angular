@@ -46,5 +46,23 @@
     <input type="number" formControlName="hostelfee">
   </div>
 
+  <!--  Implementing FormArray in Dynamic forms -->
+
+  <button (click)="addCard()">Add Card</button>
+  <div formArrayName="cards">
+    <div *ngFor="let card of cardFormArray.controls; let i=index">
+        <div formGroupName="{{i}}">
+            <h2>card{{i+1}}</h2>
+            <label for="">Card Number: </label>
+            <input type="number" formControlName="number"><br>
+            <label for="">Expiry: </label>
+            <input type="month" formControlName="expiry"><br>
+            <label for="">Cvv: </label>
+            <input type="number" formControlName="cvv"><br>
+            <button (click)="delete(i)">Delete Card</button><br>
+        </div>
+    </div>
+  </div>
+
   <button (click)="create()">Submit</button>
 </form>

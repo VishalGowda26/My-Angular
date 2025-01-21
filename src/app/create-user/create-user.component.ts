@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-user',
@@ -21,7 +21,29 @@ export class CreateUserComponent {
     type: new FormControl(),
     // busfee: new FormControl(),
     // hostelfee: new FormControl(),
+    cards: new FormArray([]),
   });
+
+  //*  NOTE: Implementing FormArray in Dynamic forms
+
+  get cardFormArray() {
+    return this.userForm.get('cards') as FormArray;
+  }
+
+  addCard() {
+    this.cardFormArray.push(
+      new FormGroup({
+        number: new FormControl(),
+        expiry: new FormControl(),
+        cvv: new FormControl(),
+      })
+    );
+  }
+
+  delete(i: number) {
+    this.cardFormArray.removeAt(i);
+  }
+
 
   //*  NOTE:  loading in constructor so that when the form loads this data will also be loaded & we can use dynamic data in forms
 

@@ -18,7 +18,24 @@ export class CreateUserComponent {
       state: new FormControl(),
       pincode: new FormControl(),
     }),
+    type: new FormControl(),
+    // busfee: new FormControl(),
+    // hostelfee: new FormControl(),
   });
+
+  //*  NOTE:  loading in constructor so that when the form loads this data will also be loaded & we can use dynamic data in forms
+
+  constructor() {
+    this.userForm.get('type')?.valueChanges.subscribe((data: any) => {
+      if (data == 'dayscholar') {
+        this.userForm.addControl('busfee', new FormControl());
+        this.userForm.removeControl('hostelfee');
+      } else {
+        this.userForm.addControl('hostelfee', new FormControl());
+        this.userForm.removeControl('busfee');
+      }
+    });
+  }
 
   create() {
     console.log(this.userForm.value);

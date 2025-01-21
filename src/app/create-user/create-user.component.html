@@ -1,0 +1,16 @@
+<h1>create-user</h1>
+
+<form action="" [formGroup]="userForm">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" formControlName="name" /> <br />
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" formControlName="email" /> <br />
+
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" formControlName="password" /> <br />
+
+  <label for="mobile">Mobile</label>
+  <input type="number" id="mobile" name="mobile" formControlName="mobile" /> <br />
+  <button (click)="create()">Submit</button>
+</form>

@@ -43,6 +43,10 @@
 
     <label for="pincode">Pincode</label>
     <input type="number" id="pincode" name="pincode" formControlName="pincode" /> <br />
+    <div class="text-danger" *ngIf="userForm.get('address')?.get('pincode')?.invalid && userForm.get('address')?.get('pincode')?.touched">
+      <b *ngIf="userForm.get('address')?.get('pincode')?.errors?.['required']">Pincode is Required</b>
+      <b *ngIf="userForm.get('address')?.get('pincode')?.errors?.['max']">Pincode must contain 6 digits only</b>
+    </div>
   </div>
 
 <!-- Dynamic forms -->
@@ -76,6 +80,10 @@
             <input type="month" formControlName="expiry"><br>
             <label for="">Cvv: </label>
             <input type="number" formControlName="cvv"><br>
+            <div class="text-danger" *ngIf="cardFormArray.controls[i]?.get('cvv')?.invalid && cardFormArray.controls[i]?.get('cvv')?.touched">
+              <b *ngIf="cardFormArray.controls[i]?.get('cvv')?.errors?.['required']">cvv is required</b>
+              <b *ngIf="cardFormArray.controls[i]?.get('cvv')?.errors?.['max']">Max 3 digits</b>
+            </div>
             <button (click)="delete(i)">Delete Card</button><br>
         </div>
     </div>

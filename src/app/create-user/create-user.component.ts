@@ -16,7 +16,7 @@ export class CreateUserComponent {
       village: new FormControl(),
       district: new FormControl(),
       state: new FormControl(),
-      pincode: new FormControl(),
+      pincode: new FormControl('',[Validators.required,Validators.max(999999)]),
     }),
     type: new FormControl(),
     // busfee: new FormControl(),
@@ -35,7 +35,7 @@ export class CreateUserComponent {
       new FormGroup({
         number: new FormControl(),
         expiry: new FormControl(),
-        cvv: new FormControl(),
+        cvv: new FormControl('',[Validators.required,Validators.max(999)]),
       })
     );
   }

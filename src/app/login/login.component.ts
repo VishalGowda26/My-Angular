@@ -22,6 +22,7 @@ export class LoginComponent {
       (data: any) => {
         console.log(data);
         alert('Login Successfully!');
+        sessionStorage.setItem('token', data.token);
         // Navigate to Url
         this._router.navigateByUrl('/dashboard');
       },

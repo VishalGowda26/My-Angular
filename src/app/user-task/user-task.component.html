@@ -1,0 +1,80 @@
+<div class="form">
+    <h3 class="animated-text">Person Details</h3>
+    
+  <form action="" [formGroup]="personForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" formControlName="name" /><br />
+
+    <label for="class">Class</label>
+    <input type="number" id="class" name="class" formControlName="class" /><br />
+    
+    <label for="fathername">Father Name</label>
+    <input type="text" id="fathername" name="fathername" formControlName="fathername" /><br />
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" formControlName="email" /><br />
+    
+    <label for="dob">DOB</label>
+    <input type="date" id="dob" name="dob" formControlName="dob" /><br />
+    
+    <label for="mobile">Mobile</label>
+    <input type="number" id="mobile" name="mobile" formControlName="mobile" /><br />
+    <div class="text-danger" *ngIf="personForm.controls['mobile'].invalid && (personForm.controls['mobile'].touched || personForm.controls['mobile'].dirty)">
+        <small *ngIf="personForm.controls['mobile'].errors?.['required']">Mobile is Required</small>
+        <small *ngIf="personForm.controls['mobile'].errors?.['pattern']">MobileNo must contain 10 digits</small>
+    </div>
+    
+    <!-- Nested Form -->
+    <div formGroupName="address">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" formControlName="addressLine" /><br />
+        
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" formControlName="state" /><br />
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" formControlName="city" /><br />
+
+        <label for="pincode">Pincode</label>
+        <input type="number" id="pincode" name="pincode" formControlName="pincode" /><br />
+        <div class="text-danger" *ngIf="personForm.controls['address']?.get('pincode')?.invalid && (personForm.controls['address']?.get('pincode')?.touched || personForm.controls['address']?.get('pincode')?.dirty)">
+            <small *ngIf="personForm.controls['address']?.get('pincode')?.errors?.['required']">Pincode is Required</small>
+            <small *ngIf="personForm.controls['address']?.get('pincode')?.errors?.['pattern']">Pincode must contain 6 digits</small>
+          </div>
+    </div>
+
+    <!-- Dynamic Fields to Form -->
+    <label for="">Type: </label>&nbsp;&nbsp;&nbsp;
+    <input style="float: none;" type="radio" value="dayscholar" formControlName="type" >
+    <label for="">Dayscholar</label>&nbsp;
+    <input style="float: none;" type="radio" value="hostel" formControlName="type">
+    <label for="">Hostelite</label>&nbsp;
+
+    <div *ngIf="personForm.get('type')?.value=='dayscholar'">
+        <label for="busfee">Bus Fee:</label>
+        <input type="number" formControlName="busfee">
+    </div>
+
+    <div *ngIf="personForm.get('type')?.value=='hostel'">
+        <label for="hostelfee">Hostel Fee:</label>
+        <input type="number" formControlName="hostelfee">
+    </div>
+
+    <!-- FormArray into Form -->
+     <button class="btn btn-outline-info btn-sm" (click)="addmarks()">add marks</button>
+     <div formArrayName="marks">
+        <div *ngFor="let mark of marksFormArray.controls,let i=index">
+            <div formGroupName="{{i}}"><br>
+                <label for="class">Class: </label>
+                <input type="number" name="class" id="class" formControlName="class"><br>
+                <label for="year">Year: </label>
+                <input type="number" name="year" id="year" formControlName="year"><br>
+                <label for="percentage">percentage: </label>
+                <input type="number" name="percentage" id="percentage" formControlName="percentage">
+            </div>
+        </div>
+     </div>
+
+    <button class="btn btn-success btn-sm" (click)="save()">Save Details</button>
+  </form>
+</div>

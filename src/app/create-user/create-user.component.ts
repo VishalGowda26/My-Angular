@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-user',
@@ -8,15 +8,15 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 })
 export class CreateUserComponent {
   userForm: FormGroup = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    mobile: new FormControl(''),
+    name: new FormControl('',[Validators.required]),
+    email: new FormControl('',[Validators.required,Validators.email]),
+    password: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(10)]),
+    mobile: new FormControl('',[Validators.required,Validators.min(1000000000),Validators.max(9999999999)]),
     address: new FormGroup({
       village: new FormControl(),
       district: new FormControl(),
       state: new FormControl(),
-      pincode: new FormControl(),
+      pincode: new FormControl('',[Validators.required,Validators.max(999999)]),
     }),
     type: new FormControl(),
     // busfee: new FormControl(),
@@ -35,7 +35,7 @@ export class CreateUserComponent {
       new FormGroup({
         number: new FormControl(),
         expiry: new FormControl(),
-        cvv: new FormControl(),
+        cvv: new FormControl('',[Validators.required,Validators.max(999)]),
       })
     );
   }

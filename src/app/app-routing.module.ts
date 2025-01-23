@@ -61,6 +61,7 @@ const routes: Routes = [
       { path: 'students', component: StudentComponent },
       { path: 'create-student', component: CreateStudentComponent },
       { path: 'vehicle-details/:id', component: VehicleDetailsComponent },
+      { path: 'edit-vehicle/:id', component: CreateVehicleComponent },
     ],
   },
   { path: '**', component: ErrorComponent },

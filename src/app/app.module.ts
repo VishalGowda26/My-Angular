@@ -32,8 +32,12 @@ import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.co
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentComponent } from './student/student.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+<<<<<<< HEAD
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+=======
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserTaskComponent } from './user-task/user-task.component';
+>>>>>>> 9117aee8120e13f097b7cffc009291b395963fca
 
 @NgModule({
   declarations: [
@@ -65,8 +69,12 @@ import { UserTaskComponent } from './user-task/user-task.component';
     CreateVehicleComponent,
     StudentComponent,
     CreateStudentComponent,
+<<<<<<< HEAD
+    VehicleDetailsComponent
+=======
     CreateUserComponent,
     UserTaskComponent
+>>>>>>> 9117aee8120e13f097b7cffc009291b395963fca
   ],
   imports: [
     BrowserModule,

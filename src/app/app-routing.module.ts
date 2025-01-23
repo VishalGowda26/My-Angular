@@ -27,9 +27,11 @@ import { PokemonCarouselComponent } from './pokemon-carousel/pokemon-carousel.co
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentComponent } from './student/student.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+<<<<<<< HEAD
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+=======
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserTaskComponent } from './user-task/user-task.component';
-import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -39,32 +41,32 @@ const routes: Routes = [
     canActivate: [AuthenticationGuard],
     component: DashboardComponent,
     children: [
-      { path: 'home', canActivate: [AuthenticationGuard], component: HomeComponent },
-      { path: 'welcome', canActivate: [AuthenticationGuard], component: WelcomeComponent },
-      { path: 'databinding', canActivate: [AuthenticationGuard], component: DatabindingComponent },
-      { path: 'calculator', canActivate: [AuthenticationGuard], component: CalculatorComponent },
-      { path: 'rectangle', canActivate: [AuthenticationGuard], component: RectangleComponent },
-      { path: 'circle', canActivate: [AuthenticationGuard], component: CircleComponent },
-      { path: 'bmi', canActivate: [AuthenticationGuard], component: BmiComponent },
-      { path: 'directives', canActivate: [AuthenticationGuard], component: DirectivesComponent },
-      { path: 'pipes', canActivate: [AuthenticationGuard], component: PipesComponent },
-      { path: 'emp', canActivate: [AuthenticationGuard], component: EmployeeComponent },
-      { path: 'mart', canActivate: [AuthenticationGuard], component: MyMartComponent },
-      { path: 'vehicle', canActivate: [AuthenticationGuard], component: VehicleComponent },
-      { path: 'create-vehicle', canActivate: [AuthenticationGuard], component: CreateVehicleComponent },
-      { path: 'accounts',canActivate: [AuthenticationGuard], component: AccountsComponent },
-      { path: 'store', canActivate: [AuthenticationGuard], component: FakestoreComponent },
-      { path: 'mail', canActivate: [AuthenticationGuard], component: MailComponent },
-      { path: 'pinterest', canActivate: [AuthenticationGuard], component: PinterestComponent },
-      { path: 'weather', canActivate: [AuthenticationGuard], component: WeatherComponent },
-      { path: 'blogs', canActivate: [AuthenticationGuard], component: BlogComponent },
-      { path: 'movie', canActivate: [AuthenticationGuard], component: MovieComponent },
-      { path: 'profile', canActivate: [AuthenticationGuard], component: ProfileComponent },
-      { path: 'cards', canActivate: [AuthenticationGuard], component: PokemonCarouselComponent },
-      { path: 'students', canActivate: [AuthenticationGuard], component: StudentComponent },
-      { path: 'create-student', canActivate: [AuthenticationGuard], component: CreateStudentComponent },
-      { path: 'create-user', canActivate: [AuthenticationGuard], component: CreateUserComponent },
-      { path: 'user-task', canActivate: [AuthenticationGuard], component: UserTaskComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'welcome', component: WelcomeComponent },
+      { path: 'databinding', component: DatabindingComponent },
+      { path: 'calculator', component: CalculatorComponent },
+      { path: 'rectangle', component: RectangleComponent },
+      { path: 'circle', component: CircleComponent },
+      { path: 'bmi', component: BmiComponent },
+      { path: 'directives', component: DirectivesComponent },
+      { path: 'pipes', component: PipesComponent },
+      { path: 'emp', component: EmployeeComponent },
+      { path: 'mart', component: MyMartComponent },
+      { path: 'vehicle', component: VehicleComponent },
+      { path: 'create-vehicle', component: CreateVehicleComponent },
+      { path: 'accounts', component: AccountsComponent },
+      { path: 'store', component: FakestoreComponent },
+      { path: 'mail', component: MailComponent },
+      { path: 'pinterest', component: PinterestComponent },
+      { path: 'weather', component: WeatherComponent },
+      { path: 'blogs', component: BlogComponent },
+      { path: 'movie', component: MovieComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'cards', component: PokemonCarouselComponent },
+      { path: 'students', component: StudentComponent },
+      { path: 'create-student', component: CreateStudentComponent },
+      { path: 'create-user', component: CreateUserComponent },
+      { path: 'user-task', component: UserTaskComponent },
     ],
   },
   { path: '**', component: ErrorComponent },

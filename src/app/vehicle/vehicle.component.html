@@ -60,6 +60,12 @@
         <img width="100px" height="100px" src="{{ vehicle.image }}" alt="" />
       </td>
       <td>
+        <button class="btn btn-danger" 
+        routerLink="/dashboard/vehicle-details/{{vehicle.id}}">
+          <i class="bi bi-eye-fill"></i>
+        </button>
+      </td>
+      <td>
         <button class="btn btn-danger" (click)="delete(vehicle.id)">
           <i class="bi bi-trash-fill"></i>
         </button>

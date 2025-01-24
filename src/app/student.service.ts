@@ -50,4 +50,9 @@ export class StudentService {
   getStudent(id: number): Observable<any> {
     return this._httpClient.get(this.baseUrl + '/' + id);
   }
+
+  // Update student by particular id
+  updateStudent(id: number, data: any): Observable<any> {
+    return this._httpClient.put(this.baseUrl + '/' + id, data);
+  }
 }

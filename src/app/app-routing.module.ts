@@ -65,8 +65,9 @@ const routes: Routes = [
       { path: 'create-user', component: CreateUserComponent },
 
       { path: 'vehicle-details/:id', component: VehicleDetailsComponent },
-      { path: 'student-details/:id', component: StudentDetailsComponent },
       { path: 'edit-vehicle/:id', component: CreateVehicleComponent },
+      { path: 'student-details/:id', component: StudentDetailsComponent },
+      { path: 'edit-student/:id', component: CreateStudentComponent },
     ],
   },
   { path: '**', component: ErrorComponent },

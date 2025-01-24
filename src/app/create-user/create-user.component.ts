@@ -12,7 +12,14 @@ export class CreateUserComponent {
     email: new FormControl(''),
     password: new FormControl(''),
     mobile: new FormControl(''),
+    address: new FormGroup({
+      village: new FormControl(),
+      district: new FormControl(),
+      state: new FormControl(),
+      pincode: new FormControl(),
+    }),
   });
+
   create() {
     console.log(this.userForm.value);
   }

@@ -8,8 +8,20 @@
 
   <label for="password">Password</label>
   <input type="password" id="password" name="password" formControlName="password" /> <br />
-  
+
   <label for="mobile">Mobile</label>
   <input type="number" id="mobile" name="mobile" formControlName="mobile" /> <br />
+
+  <!-- Nested FormGroup -->
+  <div formGroupName="address">
+    <label for="village">Village</label>
+    <input type="text" id="village" name="village" formControlName="village" /> <br />
+    <label for="district">District</label>
+    <input type="text" id="district" name="district" formControlName="district" /> <br />
+    <label for="state">State</label>
+    <input type="text" id="state" name="state" formControlName="state" /> <br />
+    <label for="pincode">Pincode</label>
+    <input type="number" id="pincode" name="pincode" formControlName="pincode" /> <br />
+  </div>
   <button (click)="create()">Submit</button>
 </form>

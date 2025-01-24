@@ -28,6 +28,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { StudentComponent } from './student/student.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -60,6 +61,8 @@ const routes: Routes = [
       { path: 'cards', component: PokemonCarouselComponent },
       { path: 'students', component: StudentComponent },
       { path: 'create-student', component: CreateStudentComponent },
+      { path: 'create-user', component: CreateUserComponent },
+
       { path: 'vehicle-details/:id', component: VehicleDetailsComponent },
       { path: 'edit-vehicle/:id', component: CreateVehicleComponent },
     ],

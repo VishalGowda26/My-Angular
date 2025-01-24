@@ -12,16 +12,40 @@
   <label for="mobile">Mobile</label>
   <input type="number" id="mobile" name="mobile" formControlName="mobile" /> <br />
 
+
   <!-- Nested FormGroup -->
   <div formGroupName="address">
     <label for="village">Village</label>
     <input type="text" id="village" name="village" formControlName="village" /> <br />
+
     <label for="district">District</label>
     <input type="text" id="district" name="district" formControlName="district" /> <br />
+
     <label for="state">State</label>
     <input type="text" id="state" name="state" formControlName="state" /> <br />
+
     <label for="pincode">Pincode</label>
     <input type="number" id="pincode" name="pincode" formControlName="pincode" /> <br />
+
   </div>
+
+
+  <!-- Dynamic FormGroup -->
+  <label for="">Type : </label>
+  <input type="radio" name="type" value="dayscholar" formControlName="type">
+  <label>Dayscholar</label>
+  <input type="radio" name="type" value="hostel" formControlName="type">
+  <label>Hostel</label><br>
+
+  <div *ngIf="userForm.get('type')?.value=='dayscholar'">
+    <label for="">Bus Fee: </label>
+    <input type="number" formControlName="busfee">
+  </div>
+
+  <div *ngIf="userForm.get('type')?.value=='hostel'">
+    <label for="">Hostel Fee: </label>
+    <input type="number" formControlName="hostelfee">
+  </div>
+
   <button (click)="create()">Submit</button>
 </form>

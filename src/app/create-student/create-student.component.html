@@ -1,7 +1,9 @@
 <section>
   <div class="form-container">
     <div class="form-card">
-      <h2>Student Information</h2>
+      <h2 *ngIf="id">Update Information</h2>
+      <h2 *ngIf="!id">Student Information</h2>
+      
       <form action="" [formGroup]="studentForm">
         <label for="name">Name:</label>
         <input type="text" formControlName="name"/>
@@ -13,7 +15,7 @@
         <input type="text" formControlName="city"/>
 
         <label for="dob">Date of Birth:</label>
-        <input type="date" formControlName="dob"/>
+        <input type="text" formControlName="dob"/>
 
         <label for="email">Email:</label>
         <input type="text" formControlName="email"/>
@@ -33,7 +35,7 @@
         <label for="school_pin">School Pin:</label>
         <input type="text" formControlName="school_pin"/>
 
-        <button type="submit" (click)="create()">Submit</button>
+        <button type="submit" (click)="submit()">Submit</button>
       </form>
     </div>
   </div>

@@ -30,6 +30,9 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { Sibiling1Component } from './sibiling1/sibiling1.component';
+import { Sibiling2Component } from './sibiling2/sibiling2.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -68,6 +71,9 @@ const routes: Routes = [
       { path: 'edit-vehicle/:id', component: CreateVehicleComponent },
       { path: 'student-details/:id', component: StudentDetailsComponent },
       { path: 'edit-student/:id', component: CreateStudentComponent },
+      { path: 'sibling-2', component: Sibiling2Component },
+      { path: 'sibling-1', component: Sibiling1Component },
+      { path: 'parent', component: ParentComponent },
     ],
   },
   { path: '**', component: ErrorComponent },

@@ -1,3 +1,9 @@
 <p>child works!</p>
 
+<!-- Recieving from parent -->
+<h1>{{ star }}</h1>
+
+<!-- Sending to Parent -->
+<input type="text" [(ngModel)]="moon" (keyup)="fromChild()" />
+
 <button (click)="send()">send</button>

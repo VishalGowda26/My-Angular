@@ -8,6 +8,7 @@
       Rs. {{ product.price }}
     </div>
     <div class="rating">
+      <app-rating [rating]="product.rating.rate"></app-rating>
       {{ product.rating.rate }} | {{ product.rating.count }}
     </div>
   </div>

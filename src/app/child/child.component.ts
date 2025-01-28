@@ -12,4 +12,15 @@ export class ChildComponent {
   send() {
     this.bEvent.emit(26545768);
   }
+  
+  // recieving form parent
+  @Input() star: string = '';
+
+  // Sending to parent
+  moon: string = '';
+  @Output() sEvent: EventEmitter<string> = new EventEmitter();
+
+  fromChild() {
+    this.sEvent.emit(this.moon);
+  }
 }

@@ -33,6 +33,8 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { Sibiling1Component } from './sibiling1/sibiling1.component';
 import { Sibiling2Component } from './sibiling2/sibiling2.component';
 import { ParentComponent } from './parent/parent.component';
+import { AboutCompanyModule } from './about-us/about-company/about-company.module';
+import { AboutCeoModule } from './about-us/about-ceo/about-ceo.module';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -74,6 +76,8 @@ const routes: Routes = [
       { path: 'sibling-2', component: Sibiling2Component },
       { path: 'sibling-1', component: Sibiling1Component },
       { path: 'parent', component: ParentComponent },
+      { path: 'about-company', component: AboutCompanyModule },
+      { path: 'about-ceo', component: AboutCeoModule },
     ],
   },
   { path: '**', component: ErrorComponent },

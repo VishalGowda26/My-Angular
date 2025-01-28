@@ -19,7 +19,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { MyMartComponent } from './my-mart/my-mart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FakestoreComponent } from './fakestore/fakestore.component';
 import { MailComponent } from './mail/mail.component';
@@ -42,6 +42,8 @@ import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { CapitalDirective } from './capital.directive';
 import { BalancePipe } from './balance.pipe';
+import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -82,16 +84,19 @@ import { BalancePipe } from './balance.pipe';
     ChildComponent,
     RatingComponent,
     CapitalDirective,
-    BalancePipe
+    BalancePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { StudentService } from '../student.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-student',
@@ -83,4 +84,10 @@ export class StudentComponent {
       alert('You have Cancelled');
     }
   }
+
+  // Dummy example for custon dataType
+  user: User = {
+    name: '',
+    age: 0,
+  };
 }

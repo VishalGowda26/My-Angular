@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { StudentService } from '../student.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { tcsMail } from '../validators';
 
 @Component({
   selector: 'app-create-student',
@@ -35,7 +36,7 @@ export class CreateStudentComponent {
     city: new FormControl(),
     dob: new FormControl(),
     profile_picture: new FormControl(),
-    email: new FormControl(),
+    email: new FormControl("",[Validators.email,tcsMail]),
     school_logo: new FormControl(),
     school_name: new FormControl(),
     school_city: new FormControl(),

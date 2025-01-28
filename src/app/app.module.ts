@@ -40,6 +40,7 @@ import { Sibiling2Component } from './sibiling2/sibiling2.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
+import { CapitalDirective } from './capital.directive';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { RatingComponent } from './rating/rating.component';
     Sibiling2Component,
     ParentComponent,
     ChildComponent,
-    RatingComponent
+    RatingComponent,
+    CapitalDirective
   ],
   imports: [
     BrowserModule,

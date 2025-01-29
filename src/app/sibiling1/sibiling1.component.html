@@ -1,4 +1,8 @@
-<p>sibiling1 works!</p>
+<!-- <p>sibiling1 works!</p>
 
-<input type="number" [(ngModel)]="count" (keyup)="send()">
-<app-sibiling2></app-sibiling2>
+<input type="number" [(ngModel)]="count" (keyup)="send()"> -->
+
+<!-- Task fro text Area -->
+ <textarea cols="50" rows="5" (input)="onTextChange($event)" [(ngModel)]="text" [attr.disabled]="isMaxCharsReached() ? true : null"></textarea>
+ <app-sibiling2 [textCount]="textCount" ></app-sibiling2>
+ <h4 *ngIf="isMaxCharsReached" class="text-danger">'You have reached Max character limit'</h4>

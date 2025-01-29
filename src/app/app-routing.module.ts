@@ -78,6 +78,13 @@ const routes: Routes = [
       { path: 'parent', component: ParentComponent },
       { path: 'about-company', component: AboutCompanyModule },
       { path: 'about-ceo', component: AboutCeoModule },
+      { path: 'home', component: HomeComponent },
+      // Lazy-loaded payment section
+      {
+        path: 'payments',
+        loadChildren: () =>
+          import('./payments/payments.module').then((m) => m.PaymentsModule),
+      },
     ],
   },
   { path: '**', component: ErrorComponent },

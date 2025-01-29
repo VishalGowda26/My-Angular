@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonService } from '../common.service';
 
 @Component({
@@ -20,4 +20,6 @@ export class Sibiling2Component {
       }
     );
   }
+
+  @Input() textCount: number = 0;
 }

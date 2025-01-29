@@ -1,0 +1,14 @@
+app-sibiling2 {
+  position: relative;
+  font-size: 10px;
+  top:105px;
+  left: 450px;
+}
+textarea {
+  position: absolute;
+  padding: 10px;
+}
+h4{
+    margin-top: 25px;
+    padding: 20px;
+}

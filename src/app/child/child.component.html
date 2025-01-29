@@ -4,6 +4,6 @@
 <h1>{{ star }}</h1>
 
 <!-- Sending to Parent -->
-<input type="text" [(ngModel)]="moon" (keyup)="fromChild()" />
+<input type="text" [(ngModel)]="moon" (keyup)="fromChild()" placeholder="from child"/>
 
 <button (click)="send()">send</button>

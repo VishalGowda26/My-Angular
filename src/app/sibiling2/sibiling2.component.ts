@@ -21,5 +21,4 @@ export class Sibiling2Component {
     );
   }
 
-  @Input() textCount: number = 0;
 }

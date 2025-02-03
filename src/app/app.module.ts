@@ -44,6 +44,7 @@ import { CapitalDirective } from './capital.directive';
 import { BalancePipe } from './balance.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { AboutUsModule } from './about-us/about-us.module';
     RatingComponent,
     CapitalDirective,
     BalancePipe,
+    ToDoListComponent,
   ],
   imports: [
     BrowserModule,

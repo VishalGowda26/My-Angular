@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonService } from '../common.service';
 
 @Component({
@@ -14,23 +14,16 @@ export class Sibiling1Component {
     this._commonService.countSub.next(this.count);
   }
 
+  @Input() max: number = 0;
+
   text: string = '';
   textCount: number = 0;
-  maxChars: number = 50;
-  displaytext: string = 'You have reached Max character limit';
 
-  onTextChange(event: any) {
-    this.text = event.target.value;
-    this.textCount = this.text.length;
-    if (this.textCount == this.maxChars) {
-      alert('You have reached maximum characters');
+  onTextChange(event: any) {//0
+    this.textCount = this.text.length; //
+    if (this.textCount == this.max) {
     } else {
       return;
     }
   }
-
-  isMaxCharsReached(): boolean {
-    return this.textCount >= this.maxChars;
-  }
-
 }

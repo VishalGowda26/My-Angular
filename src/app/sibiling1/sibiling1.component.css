@@ -1,14 +1,17 @@
-app-sibiling2 {
+div {
   position: relative;
-  font-size: 10px;
-  top:105px;
-  left: 450px;
+  font-size: 15px;
+  top:120px;
+  left: 285px;
 }
 textarea {
   position: absolute;
   padding: 10px;
 }
 h4{
-    margin-top: 25px;
+  position: absolute;
+    margin-top: 60px;
+    text-align: center;
     padding: 20px;
+    font-size: 15px;
 }

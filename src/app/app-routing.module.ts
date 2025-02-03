@@ -35,6 +35,7 @@ import { Sibiling2Component } from './sibiling2/sibiling2.component';
 import { ParentComponent } from './parent/parent.component';
 import { AboutCompanyModule } from './about-us/about-company/about-company.module';
 import { AboutCeoModule } from './about-us/about-ceo/about-ceo.module';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -78,7 +79,7 @@ const routes: Routes = [
       { path: 'parent', component: ParentComponent },
       { path: 'about-company', component: AboutCompanyModule },
       { path: 'about-ceo', component: AboutCeoModule },
-      { path: 'home', component: HomeComponent },
+      { path: 'to-do-list', component: ToDoListComponent },
       // Lazy-loaded payment section
       {
         path: 'payments',

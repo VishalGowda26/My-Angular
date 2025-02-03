@@ -1,0 +1,18 @@
+<section>
+  <article class="card">
+    <h4>To-do-list</h4>
+    <div class="ino">
+      <input type="text" placeholder="Enter your activity" [(ngModel)]="list" />
+      <button class="btn btn-primary" (click)="submit()">Submit</button>
+    </div>
+    <div class="saperator" *ngFor="let list of arrList; let i = index">
+      <div class="checkboxs" >
+        <input type="checkbox" />
+        <p>{{ list }}</p>
+      </div>
+      <div>
+        <button class="btn btn-danger btn-sm" (click)="remove(i)">Remove</button>
+      </div>
+    </div>
+  </article>
+</section>

@@ -37,6 +37,7 @@ import { AboutCompanyModule } from './about-us/about-company/about-company.modul
 import { AboutCeoModule } from './about-us/about-ceo/about-ceo.module';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { OperatorsComponent } from './operators/operators.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -82,6 +83,7 @@ const routes: Routes = [
       { path: 'about-company', canActivate: [AuthenticationGuard], component: AboutCompanyModule },
       { path: 'about-ceo', canActivate: [AuthenticationGuard], component: AboutCeoModule },
       { path: 'to-do-list', canActivate: [AuthenticationGuard], component: ToDoListComponent },
+      { path: 'operators', canActivate: [AuthenticationGuard], component: OperatorsComponent },
       // Lazy-loaded payment section
       {
         path: 'payments',

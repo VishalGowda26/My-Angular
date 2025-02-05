@@ -49,6 +49,7 @@ const routes: Routes = [
     children: [
       { path: 'home', canActivate: [AuthenticationGuard], component: HomeComponent,},
       { path: 'welcome', canActivate: [AuthenticationGuard], component: WelcomeComponent },
+      { path: '', canActivate: [AuthenticationGuard], component: WelcomeComponent },
       { path: 'databinding', canActivate: [AuthenticationGuard], component: DatabindingComponent },
       { path: 'calculator', canActivate: [AuthenticationGuard], component: CalculatorComponent },
       { path: 'rectangle', canActivate: [AuthenticationGuard], component: RectangleComponent },

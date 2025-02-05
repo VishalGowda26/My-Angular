@@ -2,27 +2,28 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.left{
-    width: 15%;
-    height:100%;
-    background-color: grey; 
-    padding: 20px;
-    color: rgb(255, 255, 255);
+.left {
+  width: 15%;
+  height: 100%;
+  background-color: grey;
+  padding: 20px;
+  color: rgb(255, 255, 255);
 }
-.left_top{
-  height: 15%;
+.left_top {
+  height: 10%;
   align-items: center;
   justify-content: center;
   display: flex;
   font-size: 30px;
 }
-.left_middle{
-  height: 70%;
-  border-top: 2px solid rgb(204,204,205);
-  border-bottom: 2px solid rgb(204,204,205);
+.left_middle {
+  height: 80%;
+  border-top: 2px solid rgb(204, 204, 205);
+  border-bottom: 2px solid rgb(204, 204, 205);
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -30,25 +31,28 @@
   font-size: 13px;
   letter-spacing: 2px;
   font-family: "Poppins";
+  overflow: auto;
+  padding: 10px;
 }
-.left_bottom{
-  height: 15%;
+.left_bottom {
+  height: 10%;
   align-items: center;
   justify-content: center;
   display: flex;
   padding-top: 10px;
 }
-button{
-  height: 50%;
+button {
+  height: 80%;
   width: 50%;
   color: white;
   background-color: hotpink;
-  border: 2px solid rgb(204,204,205);
+  border: 2px solid rgb(204, 204, 205);
+  border-radius: 8px;
 }
-.right{
-    width: 85%;
-    height: 100%;
-    border:10px solid hotpink;
-    padding: 20px;
-    overflow: auto;
+.right {
+  width: 85%;
+  height: 100%;
+  border: 10px solid hotpink;
+  padding: 20px;
+  overflow: auto;
 }

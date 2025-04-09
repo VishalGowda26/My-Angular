@@ -9,9 +9,9 @@
                 <label for="floatingInput">Email address</label>
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+                <input [type]="showPassword?'text':'password'" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
                 <label for="floatingPassword">Password</label>
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Show</button>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="seePassword()">Show</button>
               </div>
             <p><a href="#" class="link-primary">forgot password?</a></p>
             <div class="form-check">

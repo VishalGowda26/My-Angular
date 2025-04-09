@@ -32,4 +32,10 @@ export class LoginComponent {
       }
     );
   }
+
+  showPassword: boolean = false;
+
+  seePassword() {
+    this.showPassword = !this.showPassword;
+  }
 }

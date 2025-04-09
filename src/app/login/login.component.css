@@ -8,10 +8,11 @@ section {
   flex-direction: column;
   gap: 20px;
 }
-.fixed-top{
+.fixed-top {
   position: absolute;
   top: 30px;
   left: 50px;
+  z-index: -1;
 }
 .btn-primary {
   width: 100%;
@@ -34,7 +35,6 @@ section {
   position: absolute;
   right: 0px;
   bottom: 12px;
-
 }
 .form-control {
   position: relative;
@@ -42,7 +42,7 @@ section {
 .btn-outline-secondary:hover {
   background-color: rgba(255, 255, 255, 0);
 }
-.form-check{
+.form-check {
   padding-bottom: 10px;
 }
 .saperator {
@@ -50,17 +50,17 @@ section {
   align-items: center;
   justify-content: center;
 }
-.sign-up{
+.sign-up {
   height: 50px;
 }
-.btn-light{
+.btn-light {
   width: 100%;
   height: 100%;
   position: relative;
   border: 2px solid gray;
   border-radius: 50px;
 }
-.apple_logo{
+.apple_logo {
   position: absolute;
   z-index: 100;
   left: 70px;
